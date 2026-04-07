@@ -6,21 +6,23 @@
 
 
 LocalStorage y sessionStorage
--● Se utilizan en lugar de las cookies
--● localStorage son datos persistentes
--● sessionStorage no son persistentes
+- ● Se utilizan en lugar de las cookies
+- ● localStorage son datos persistentes
+- ● sessionStorage no son persistentes
 
 
 LocalStorage y sessionStorage
--● localStorage es más seguro, almacena más información y no afecta el desempeño del navegador.
--● Soporta 5Mb de almacenamiento y no envía información al servidor.
+- ● localStorage es más seguro, almacena más información y no afecta el desempeño del navegador.
+- ● Soporta 5Mb de almacenamiento y no envía información al servidor.
 
 ## 🔹 1. ¿Qué es localStorage?
 
 Es un almacenamiento en el navegador que:
 
 Guarda datos en formato clave → valor
+
 No se borra al recargar la página
+
 Solo acepta strings
 
 👉 Por eso usas:
@@ -28,8 +30,9 @@ Solo acepta strings
 JSON.stringify()
 JSON.parse()
 
-🔹 2. Inicialización de datos
+## 🔹 2. Inicialización de datos
 let libros = JSON.parse(localStorage.getItem("libros")) || [];
+
 ¿Qué pasa aquí?
 Busca en el navegador la clave "libros"
 Si existe → la convierte de texto a objeto
