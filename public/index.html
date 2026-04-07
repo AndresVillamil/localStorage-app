@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td> <input type="text" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Clave</td>
+                <td><input type="password" id="clave"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnEnviar" onclick="guardarDatos()">Enviar Datos</button></td>
+                <td colspan="2"><button id="btnRecuperar" onclick="recuperarDatos()">Recuperar Datos</button></td>
+        </table>
+
+        <p id="salida">Recuperar Datos</p>
+    </div>
+ <h2>Registro de Libros</h2>
+
+    <form onsubmit="return agregarLibro()">
+        <table>
+            <tr>
+                <td>Título:</td>
+                <td><input type="text" id="titulo"></td>
+            </tr>
+            <tr>
+                <td>Autor:</td>
+                <td><input type="text" id="autor"></td>
+            </tr>
+            <tr>
+                <td>Editorial:</td>
+                <td><input type="text" id="editorial"></td>
+            </tr>
+            <tr>
+                <td>Año:</td>
+                <td><input type="text" id="anio"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Enviar Libro</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Listado de Libros</h2>
+    <div id="listaLibros"></div>
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
