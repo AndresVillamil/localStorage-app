@@ -34,20 +34,23 @@ JSON.parse()
 let libros = JSON.parse(localStorage.getItem("libros")) || [];
 
 ¿Qué pasa aquí?
+
 Busca en el navegador la clave "libros"
-Si existe → la convierte de texto a objeto
-Si NO existe → usa un array vacío []
+- Si existe → la convierte de texto a objeto
+- Si NO existe → usa un array vacío []
 
 👉 Esto permite que los datos persistan entre recargas.
 
-🔹 3. Guardar en localStorage
+## 🔹 3. Guardar en localStorage
+
 function guardarStorage() {
     localStorage.setItem("libros", JSON.stringify(libros));
 }
+
 Clave del funcionamiento:
-libros es un array de objetos
-Se convierte a texto con JSON.stringify
-Se guarda con la clave "libros"
+- libros es un array de objetos
+- Se convierte a texto con JSON.stringify
+- Se guarda con la clave "libros"
 
 📌 Ejemplo de lo que realmente se guarda:
 
@@ -59,6 +62,7 @@ Se guarda con la clave "libros"
     "anio": "1990"
   }
 ]
+
 🔹 4. Agregar libros
 form.addEventListener("submit", function(e) {
     e.preventDefault();
